@@ -5,7 +5,7 @@ template Whitelist() {
   signal input recipient;
   signal output hash;
 
-  component hasher = MiMCSponge(1, 220, 1);
+  component hasher = MiMCSponge(1, 5, 1);
   hasher.ins[0] <== key;
   hasher.k <== 0;
   hash <== hasher.outs[0];
